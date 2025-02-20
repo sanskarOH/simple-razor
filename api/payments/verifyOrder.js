@@ -11,7 +11,7 @@ const verifyOrder = async (req, res) => {
 
     const paySignature = signature(order_id, payment_id);
 
-    if (generated_signature === razorpay_signature) {
+    if (paySignature === razorpaySignature) {
       res
         .status(200)
         .json({ success: true, message: "Payment verified successfully" });
