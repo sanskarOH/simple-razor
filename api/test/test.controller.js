@@ -1,4 +1,4 @@
-const testController = (req, res) => {
+const testController = (res) => {
   const healthcheck = {
     uptime: process.uptime(),
     message: "OK",
