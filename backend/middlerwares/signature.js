@@ -1,4 +1,4 @@
-const crypto = require("cypto");
+const crypto = require("crypto");
 const config = require("../config/config.js");
 
 const generateSignature = (order_id, payment_id) => {

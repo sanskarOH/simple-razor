@@ -1,4 +1,4 @@
-import signature from "../../middlerwares/signature.js";
+const signature = require("../../middlerwares/signature");
 
 const razInstance = require("../../utils/razorpay.js");
 

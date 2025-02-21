@@ -1,11 +1,7 @@
+const express = require("express");
 const createOrder = require("./createOrder");
-const verifyOrder = require('./verifyOrder')
+const verifyOrder = require("./verifyOrder");
 
-
-
-const payment_capture = (req,res) =>{
-
-
-}
-
-module.export = payment_capture;
+const paymentRouter = express.Router();
+paymentRouter.post("/pay", createOrder);
+module.exports = paymentRouter;
