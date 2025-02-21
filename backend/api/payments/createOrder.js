@@ -8,6 +8,7 @@ const createOrder = async (req, res) => {
       currency: "INR",
       receipt: `order_reciept_id_${Math.random() * 1000}`,
       payment_capture: 1,
+      
     };
 
     const order = await razInstance.orders.create(options);
