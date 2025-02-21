@@ -1,7 +1,6 @@
 import signature from "../../middlerwares/signature.js";
 
 const razInstance = require("../../utils/razorpay.js");
-const generateSignature = require("../../utils/signature.js");
 
 const verifyOrder = async (req, res) => {
   try {
