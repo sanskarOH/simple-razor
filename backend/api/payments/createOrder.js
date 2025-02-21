@@ -3,7 +3,7 @@ const razInstance = require("../../utils/razorpay.js");
 const createOrder = async (req, res) => {
   try {
     const options = {
-      amount: req.body.amount * 100,
+      amount: (req.body.amount || 10) * 100,
       currency: "INR",
       receipt: `order_reciept_id_${Math.random() * 1000}`,
       payment_capture: 1,

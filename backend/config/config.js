@@ -6,4 +6,5 @@ module.exports = {
     key_id: process.env.key_id,
     key_secret: process.env.key_secret,
   },
+  MONGODB_URI: process.env.MONGODB_URI,
 };
