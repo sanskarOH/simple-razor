@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Registration</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, button {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .member {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button {
+            cursor: pointer;
+        }
+        .remove-btn {
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Hackathon Registration</h2>
+        <form id="registerForm">
+            <input type="text" id="teamName" placeholder="Team Name" required>
+            
+            <div id="teamMembersContainer">
+                <!-- Team members will be added dynamically here -->
+            </div>
+            
+            <button type="button" id="addMemberBtn">Add Team Member</button>
+            <button type="submit">Register & Pay</button>
+        </form>
+    </div>
+
+</body>
+</html>

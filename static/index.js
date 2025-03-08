@@ -1,13 +1,15 @@
-const amountInput = document.getElementById("amount");
+const num = document.getElementById('number');
+const nam = document.getElementById('name');
 
+
+const req = {
+  name: nam,
+  number: num,
+  email: document.getElementById('email') 
+}
 async function payNow() {
   try {
-    const amount = Number(amountInput.value);
-    if (!amount) {
-      alert("Please enter a valid amount");
-      return;
-    }
-
+    const amount = 150;
     const res = await fetch("http://localhost:3000/api/pay", {
       method: "POST",
       headers: {
@@ -29,7 +31,7 @@ async function payNow() {
       key: key_id,
       amount: order.amount,
       currency: order.currency,
-      name: "Test Checkout",
+      name: req.name,
       description: "Test Payment",
       order_id: order.id,
       handler: async function (response) {
@@ -55,9 +57,9 @@ async function payNow() {
         }
       },
       prefill: {
-        name: "Test User1",
-        email: "test@example.com",
-        contact: "9999999999",
+        name: req.name,
+        email: req.email,
+        contact: req.number,
       },
       theme: {
         color: "#3399cc",
